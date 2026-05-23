@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Of Coffee — Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">House Of Coffee</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="menu.html" class="active">Menu</a></li>
+            <li><a href="experiencia.html">Experiência</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
+        <div class="page-hero-content">
+            <span class="section-tag">MENU ESPECIAL</span>
+            <h1>Nossos favoritos.</h1>
+        </div>
+    </section>
+
+    <section class="menu">
+        <div class="menu-tabs">
+            <button class="menu-tab active" onclick="switchTab(event,'cafes-quentes')">Cafés Quentes</button>
+            <button class="menu-tab" onclick="switchTab(event,'frios')">Bebidas Frias</button>
+            <button class="menu-tab" onclick="switchTab(event,'especiais')">Especiais</button>
+            <button class="menu-tab" onclick="switchTab(event,'doces')">Doces & Pãezinhos</button>
+        </div>
+
+        <!-- CAFÉS QUENTES -->
+        <div class="menu-category active" id="cafes-quentes">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1600&auto=format&fit=crop" alt="Espresso">
+                <div class="menu-info">
+                    <h3>Espresso Premium</h3>
+                    <p>Intenso, aromático e sofisticado.</p>
+                    <span>R$ 12</span>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?q=80&w=1600&auto=format&fit=crop" alt="Cappuccino">
+                <div class="menu-info">
+                    <h3>Cappuccino Artesanal</h3>
+                    <p>Equilíbrio perfeito entre cremosidade e sabor.</p>
+                    <span>R$ 18</span>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1600&auto=format&fit=crop" alt="Latte">
+                <div class="menu-info">
+                    <h3>Vanilla Latte</h3>
+                    <p>Suavidade e aroma marcante.</p>
+                    <span>R$ 20</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BEBIDAS FRIAS -->
+        <div class="menu-category" id="frios">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?q=80&w=1600&auto=format&fit=crop" alt="Cold Brew">
+                <div class="menu-info">
+                    <h3>Cold Brew</h3>
+                    <p>Infusão lenta a frio por 18 horas. Suave e marcante.</p>
+                    <span>R$ 22</span>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=1600&auto=format&fit=crop" alt="Iced Latte">
+                <div class="menu-info">
+                    <h3>Iced Vanilla Latte</h3>
+                    <p>Espresso gelado com leite cremoso e baunilha.</p>
+                    <span>R$ 24</span>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?q=80&w=1600&auto=format&fit=crop" alt="Frappuccino">
+                <div class="menu-info">
+                    <h3>Caramel Frappé</h3>
+                    <p>Bebida gelada com caramelo e chantilly artesanal.</p>
+                    <span>R$ 28</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESPECIAIS -->
+        <div class="menu-category" id="especiais">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1518057111178-44a106bad636?q=80&w=1600&auto=format&fit=crop" alt="Flat White">
+                <div class="menu-info">
+                    <h3>Flat White</h3>
+                    <p>Dois shots de ristretto com microespuma sedosa.</p>
+                    <span>R$ 21</span>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1557006021-b85faa2bc5e2?q=80&w=1600&auto=format&fit=crop" alt="Dalgona">
+                <div class="menu-info">
+                    <h3>Dalgona Cream</h3>
+                    <p>Creme aerado de café sobre leite gelado.</p>
+                    <span>R$ 26</span>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.ctfassets.net/v601h1fyjgba/zfwTBquwJXUs2JZjZI8v4/82fc88f9d99ce3e8e9fe655ae87cfc12/Affogato.jpg" alt="Affogato">
+                <div class="menu-info">
+                    <h3>Affogato</h3>
+                    <p>Espresso quente sobre sorvete de creme artesanal.</p>
+                    <span>R$ 30</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOCES -->
+        <div class="menu-category" id="doces">
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1600&auto=format&fit=crop" alt="Croissant">
+                <div class="menu-info">
+                    <h3>Croissant de Manteiga</h3>
+                    <p>Folhado artesanal com manteiga importada.</p>
+                    <span>R$ 14</span>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1612203985729-70726954388c?q=80&w=1600&auto=format&fit=crop" alt="Cheesecake">
+                <div class="menu-info">
+                    <h3>Cheesecake de Frutas</h3>
+                    <p>Cremoso, leve e com cobertura de frutas vermelhas.</p>
+                    <span>R$ 19</span>
+                </div>
+            </div>
+            <div class="menu-card">
+                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=1600&auto=format&fit=crop" alt="Brownie">
+                <div class="menu-info">
+                    <h3>Brownie ao Café</h3>
+                    <p>Brownie úmido com ganache e grãos de café torrado.</p>
+                    <span>R$ 17</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>House Of Coffee</h2>
+        <p>Aroma que conecta pessoas.</p>
+        <div class="footer-line"></div>
+        <div class="footer-links">
+            <a href="index.html">Início</a>
+            <a href="menu.html" >Menu</a>
+            <a href="experiencia.html">Experiência</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="contato.html">Contato</a>
+        </div>
+        <div class="footer-line"></div>
+        <span>© 2026 — Todos os direitos reservados.</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
