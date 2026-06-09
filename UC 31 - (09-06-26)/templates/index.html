@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preferências do Usuário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="{{ tema }}">
+    <main class="container">
+
+        <h1>Preferências do Usuário</h1>
+
+        {% if nome %}
+            <h2>Olá, {{ nome }}! Seja bem-vindo novamente.</h2>
+        {% else %}
+            <h2>Bem-vindo! Informe seu nome para personalizar sua experiência.</h2>
+        {% endif %}
+
+        <h3>Cadastro de Nome</h3>
+
+        <form action="{{ url_for('salvar_nome') }}" method="POST">
+            <input
+                type="text"
+                name="nome"
+                placeholder="Digite seu nome"
+                required
+            >
+
+            <button type="submit">
+                Salvar Nome
+            </button>
+        </form>
+
+        <h3>Tema da Aplicação</h3>
+
+        <div class="temas">
+            <a href="{{ url_for('alterar_tema', tema='claro') }}">
+                <button type="button">
+                    Tema Claro
+                </button>
+            </a>
+
+            <a href="{{ url_for('alterar_tema', tema='escuro') }}">
+                <button type="button">
+                    Tema Escuro
+                </button>
+            </a>
+        </div>
+
+    </main>
+</body>
+</html>
