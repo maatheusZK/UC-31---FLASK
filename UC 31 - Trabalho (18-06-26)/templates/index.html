@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+
+            <h1>Lista de Tarefas</h1>
+
+            <p>
+                Olá <strong>{{ usuario }}</strong>,
+                monte sua lista aqui:
+            </p>
+
+            <form action="/adicionar" method="POST" class="task-form">
+
+                <input
+                    type="text"
+                    name="tarefa"
+                    placeholder="Digite uma tarefa"
+                    required>
+
+                <button type="submit">
+                    Adicionar
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="task-list">
+
+            {% if tarefas %}
+
+                {% for tarefa in tarefas %}
+
+                    <div class="task-card">
+
+                        <span class="task-text {% if tarefa.feita %}completed{% endif %}">
+                            {{ tarefa.texto }}
+                        </span>
+
+                        <div class="actions">
+
+                            {% if not tarefa.feita %}
+                                <a href="/marcar/{{ loop.index0 }}" class="btn-success">
+                                    Concluir
+                                </a>
+                            {% endif %}
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="empty">
+                    Nenhuma tarefa cadastrada.
+                </div>
+
+            {% endif %}
+
+        </div>
+
+        <a href="/limpar" class="btn-danger">
+            Limpar Lista
+        </a>
+
+    </div>
+
+</body>
+</html>
